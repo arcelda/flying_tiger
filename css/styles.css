@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 100%; /* Ensure full width */
+    display: flex;
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
+    height: 100vh; /* Full viewport height */
+}
+
+.intro{
+    background-color: black;
+}
+
+body{
+    height: 100vh;
+    font-size: 100%;
+}
+
+header {
+    background-color: black;
+    position: relative;
+    margin-top: auto;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    /* Horizontally centers the text */
+    align-items: center;
+    /* Vertically centers the text */
+    font-family: 'Candara';
+    text-align: center;
+    padding:0 2rem;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    background: linear-gradient(90deg, rgb(1, 41, 75) 1%, rgba(110,164,211,1) 40%, rgba(217,182,124,1) 78%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: rgba(217,182,124,1);
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links {
+    /*display: none;*/
+}
+
+.navbar .banner a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* DROP DOWN MENU */
+.dropdown_menu{
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: black;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DROP DOWN MENU ARTISTS */
+.dropdown_menu .artistList{
+    display: none;
+    position: left;
+    left: 2rem;
+    top: 60px;
+    width: 300px;
+    background-color: black;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown_menu .artistList.open{
+    height: 240px;
+}
+
+.dropdown_menu .artistList li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+
+.home-bg{
+    background: linear-gradient(90deg, rgba(0,11,20,1) 1%, rgba(110,164,211,1) 40%, rgba(217,182,124,1) 78%);
+}
+
+
+.logo {
+    width: 100%;
+    height: 100px;
+    margin-top: 1rem;
+    position: left;
+    background-size: contain;
+    background-position: left; /* Center the image */
+    margin-bottom: 1rem; /* Add space below the background image */
+}
+
+.heading-1{
+    animation: dropDown 1s 0s;
+
+    font-size: 10em;
+    text-align: center;
+    justify-content: center;
+    color: rgb(110,164,211);
+    font-family: 'Brush Script MT', 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+}
+
+div {
+    -webkit-background-clip: padding-box; /* Safari/Chrome */
+    -moz-background-clip: padding-box; /* Firefox */
+    -o-background-clip: padding-box; /* Opera */
+    background-clip: padding-box; /* Standard */
+}
+
+@keyframes dropDown {
+    from {
+        transform: translateY(-300px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
