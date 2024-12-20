@@ -37,8 +37,8 @@
                     </div>
                     <div class="excerpt bottom">
                         <p><strong>Phone: </strong>860-832-8411</p><br><br>
-                        <p><strong>Info: </strong>Any questions please email <a href="flyingtigertattoo@hotmail.com">FLYINGTIGERTATTOO@HOTMAIL.COM</a> 
-                        OR DIRECT MESSAGE US ON INSTAGRAM 
+                        <p><strong>Info: </strong>Any questions please email <a href="#">FLYINGTIGERTATTOO@HOTMAIL.COM</a> 
+                        or direct message us on Instagram 
                         <a href="https://www.instagram.com/flyingtigernewbritain/" target="_blank">FLYINGTIGERNEWBRITAIN</a>
                         </p><br><br>
                         <p><strong>ANNOUNCEMENTS: </strong><strike>CLOSED 9/29/24 AND 9/30/24</strike> </p><br><br>

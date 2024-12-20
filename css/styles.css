@@ -74,7 +74,7 @@ li {
 
 a, span {
     text-decoration: none;
-    background: linear-gradient(90deg, rgb(1, 63, 117) 1%, rgba(110,164,211,1) 40%, rgb(153, 127, 85) 78%);
+    background: linear-gradient(90deg, rgb(0, 87, 163) 1%, rgba(110,164,211,1) 40%, rgb(153, 127, 85) 78%);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 1rem;
@@ -235,7 +235,7 @@ a:hover, span:hover{
 }
 
 .contact {
-    font-size: 72px;
+    font-size: 24px;
     padding: 1rem;
     display:inline-block;
     line-height: 1;
@@ -250,7 +250,100 @@ a:hover, span:hover{
     text-align: center !important;
     justify-content: center;
     margin: 1rem;
+}
+
+.submission {
+    color: white;
+    padding: 1rem;
+    display:inline-block;
+    line-height: 1;
+    position: relative;
+    border-radius: 5px;
+    width: 50%;
+    height: 400px;
+    background-position: center; /* Center the image */    
+    /* Horizontally centers the text */
+    align-items: center;
+    /* Vertically centers the text */
+    text-align: center !important;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+    justify-content: space-evenly;
+    margin: 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 8px rgba(0, 0, 0, 0.24);
+}
+
+.form-control {
+    width: 100%;
+    font-size: 14px;
+    padding: 0 .5rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 8px rgba(0, 0, 0, 0.24);
+}
+
+.form-group textarea {
+    width: 100%;
+}
+
+.btn {
+    width: auto;
+    background-color: black;
+    color:  white;
+    font-size: 18px;
+    padding: 0 .5rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 8px rgba(0, 0, 0, 0.24);
+}
+
+.form-group{
+    margin: .5rem;   
+}
+
+.thank-you-page {
+    position: relative;
+    width: auto;
+    display:block;
+    text-align: center;
+    align-items: center;
+    min-height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    object-fit: scale-down;
+    place-items: center;
+    justify-content: space-between;
+}
+
+.thank_you {
+    font-size: 72px;
+}
+
+.thank_you:hover {
+    font-size: 84px;
+    color: black;
+}
+
+.thank-you-page .bottom {
+
+    margin-top: 5rem;
+    width: 20%;
+    height: 50%;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 8px rgba(0, 0, 0, 0.24);
+    font-size: 24px;
+}
+
+.thank-you-page .bottom a{
+    font-size: 24px;
+}
+
+address a {
+    font-size: 24px;
+}
+
+address a:hover {
+    font-size: 28px;
+    color: black;
 }
 
 .artists{
