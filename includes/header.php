@@ -21,21 +21,6 @@
 </header>
 
 <script>
-    const artistBtn = document.querySelector('.artist_btn')
-    const artistBtnIcon = document.querySelector('.artist_btn i')
-    const dropDownArtistListMenu = document.querySelector('.dropdown_menu.artistList')
-
-    artistBtn.onclick = function(){
-        dropDownArtistListMenu.classList.toggle('open')
-        const isOpen = dropDownArtistListMenu.classList.contains('open')
-
-        artistBtnIcon.classList = isOpen
-            ? "The Artists"
-            : 'fa-solid fa-bars'
-    }
-</script>
-
-<script>
     const toggleBtn = document.querySelector('.toggle_btn')
     const toggleBtnIcon = document.querySelector('.toggle_btn i')
     const dropDownMenu = document.querySelector('.dropdown_menu')
