@@ -242,7 +242,7 @@ a:hover, span:hover{
     position: relative;
     border-radius: 5px;
     width: 100%;
-    height: 100vh;
+    min-height: 60vh;
     background-position: center; /* Center the image */    
     /* Horizontally centers the text */
     align-items: center;
@@ -260,7 +260,7 @@ a:hover, span:hover{
     position: relative;
     border-radius: 5px;
     width: 50%;
-    height: 400px;
+    height: 450px;
     background-position: center; /* Center the image */    
     /* Horizontally centers the text */
     align-items: center;
@@ -283,6 +283,8 @@ a:hover, span:hover{
 
 .form-group textarea {
     width: 100%;
+    resize: none;
+    height: 250px;
 }
 
 .btn {
