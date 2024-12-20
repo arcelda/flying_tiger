@@ -33,10 +33,13 @@
     background-color: black;
 }
 
+html {
+    height: 100%;
+}
+
 body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+    min-height: 100%;
     font-family: 'Candara';
     font-size: 100%;
 }
@@ -46,7 +49,7 @@ header {
     position: sticky;
     top: 0;
     margin-top: auto;
-    height: 130px;
+    height: 100px;
     display: flex;
     justify-content: center;
     /* Horizontally centers the text */
@@ -170,6 +173,7 @@ a:hover{
 }
 
 .home-bg{
+    height: auto;
     background: linear-gradient(90deg, rgb(1, 32, 58) 1%, rgba(110,164,211,1) 40%, rgba(217,182,124,1) 78%);
 }
 
@@ -199,14 +203,23 @@ a:hover{
     text-align: center;
 }
 
+.top{
+    width: 100%;
+}
+
+.bottom {
+    width: 100%;
+}
+
 .excerpt {
+    color: white;
     padding: 1rem;
     display:inline-block;
     line-height: 1;
     position: relative;
     border-radius: 5px;
-    width: 600px;
-    height: 300px;
+    width: 400px;
+    height: 350px;
     background-position: center; /* Center the image */    
     /* Horizontally centers the text */
     align-items: left;
