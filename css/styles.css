@@ -249,7 +249,7 @@ a:hover, span:hover{
     /* Vertically centers the text */
     text-align: center !important;
     justify-content: center;
-    margin: 1rem;
+
 }
 
 .submission {
@@ -260,7 +260,7 @@ a:hover, span:hover{
     position: relative;
     border-radius: 5px;
     width: 50%;
-    height: 450px;
+    height: 500px;
     background-position: center; /* Center the image */    
     /* Horizontally centers the text */
     align-items: center;
@@ -274,9 +274,11 @@ a:hover, span:hover{
 }
 
 .form-control {
+    display: block;
     width: 100%;
+    height: 35px;
     font-size: 14px;
-    padding: 0 .5rem;
+    padding: 0 1rem;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 8px rgba(0, 0, 0, 0.24);
 }
@@ -284,7 +286,8 @@ a:hover, span:hover{
 .form-group textarea {
     width: 100%;
     resize: none;
-    height: 250px;
+    height: 250px;    
+    padding: 0 1rem;
 }
 
 .btn {
@@ -298,7 +301,7 @@ a:hover, span:hover{
 }
 
 .form-group{
-    margin: .5rem;   
+    margin: 1rem;   
 }
 
 .thank-you-page {
@@ -344,8 +347,35 @@ address a {
 }
 
 address a:hover {
-    font-size: 28px;
-    color: black;
+    font-size: 26px;
+    color: rgb(0, 82, 175);
+}
+
+/* THIS IS WHERE WE'LL BE TESTING THE NEW MODULAR GRID*/
+.artist_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-cell {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    /* Use flexbox to prevent overlap */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center items horizontally */
+    gap: 10px;              /* Add spacing between items */
+}
+
+.grid-cell img {
+    max-width: 100%;
+    height: auto;
 }
 
 .artists{
@@ -420,6 +450,11 @@ address a:hover {
     background-position: center; /* Center the image */
     margin-bottom: 1rem; /* Add space below the background image */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 8px rgba(0, 0, 0, 0.24);
+}
+
+.test {
+    width: 100px;
+    height: 100px;
 }
 
 .headline{
@@ -542,6 +577,10 @@ div {
         width: 100%;
     }
 
+    .submission {
+        min-width: 400px;
+    }
+
     .artists{
         flex-direction: column;
     }
@@ -559,6 +598,10 @@ div {
         width: 100%;
         margin-top: 15px;
 
+    }
+
+    .submission {
+        min-width: 400px;
     }
 
     .dropdown_menu {
