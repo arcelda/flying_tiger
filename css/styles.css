@@ -415,6 +415,11 @@ address a:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 8px rgba(0, 0, 0, 0.24);
 }
 
+.artist_grid div {
+    display: inline-block;
+    justify-content: space-between;
+}
+
 .artistPreview:hover{
     scale: 1.05;
 }
