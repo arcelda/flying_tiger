@@ -173,6 +173,8 @@ a:hover, span:hover{
     justify-content: left;
 }
 
+
+
 .home-bg{
     min-height: 100svh;
     background: linear-gradient(90deg, rgb(1, 32, 58) 1%, rgba(110,164,211,1) 40%, rgba(217,182,124,1) 78%);

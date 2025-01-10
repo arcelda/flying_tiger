@@ -15,7 +15,8 @@
                     <div class="excerpt bottom">
                         <p><a href="artists.php">Meet the Artists</a></p><br>
                         <p><strong>American Red Cross Certified</strong></p><br>
-                        <p><strong>Hours of Operation: </strong><br>MONDAY: CLOSED
+                        <p><strong>Hours of Operation: </strong>
+                            <br>MONDAY: CLOSED
                             <br>TUESDAY - SUNDAY: 12:00pm - 6:00pm
                         </p><br>
                         
