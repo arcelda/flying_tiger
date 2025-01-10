@@ -2,10 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Kite One', sans-serif;
 }
 
-/* Add this to your styles.css */
 .card-body {
     padding: 20px; /* Adjust padding as needed */
     margin: 0; /* Ensure there’s no extra margin */
@@ -17,7 +16,7 @@
 
 .headline {
     width: 100%;
-    height: auto;
+    min-height: 100;
 }
 
 /* Ensure flex layout in container */
@@ -175,7 +174,7 @@ a:hover, span:hover{
 }
 
 .home-bg{
-    height: auto;
+    min-height: 100svh;
     background: linear-gradient(90deg, rgb(1, 32, 58) 1%, rgba(110,164,211,1) 40%, rgba(217,182,124,1) 78%);
 }
 
@@ -342,11 +341,11 @@ a:hover, span:hover{
     font-size: 24px;
 }
 
-address a {
+.store__address a {
     font-size: 24px;
 }
 
-address a:hover {
+.store__address a:hover {
     font-size: 26px;
     color: rgb(0, 82, 175);
 }
@@ -377,6 +376,51 @@ address a:hover {
     max-width: 100%;
     height: auto;
 }
+
+.artist {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 20px 30px;
+    background: linear-gradient(90deg, rgb(0, 87, 163) 1%, rgba(110,164,211,1) 40%, rgb(153, 127, 85) 78%);
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+}
+
+.artist .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: black;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.artist .artist__information h2 {
+    text-align: center;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.artist .artist__information .info-element {
+    margin: 15px 0px;
+}
+
+.artist__name {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
 
 .artists{
     position: relative;
@@ -416,8 +460,8 @@ address a:hover {
 }
 
 .artist_grid div {
-    display: inline-block;
-    justify-content: space-between;
+    padding: 1rem;
+    display:inline-block;
 }
 
 .artistPreview:hover{

@@ -2,8 +2,48 @@
     <h2>The Artists</h2>
     <div class="card">
         <div class="card-body">
+            <input type="file" id="imageUploader" multiple accept="image/*">
             <button class="add-artist" data-artist-button>&#10009;</button>
-            <button class="delete-artist" data-delete-artist-button>&#10009;</button>
+
+            <div class="artist">
+                <div class="close-button">&times;</div>
+                <div class="artist__information">
+                    <h2>Enter artist information</h2>
+                    <div class="artist__name info-element">
+                        <div class="firstName top">
+                            <label for="firstName">First Name: </label><br>
+                            <input type="text" id="firstName" placeholder="First Name">                            
+                        </div>
+                        <div class="lastName bottom">
+                            <label for="lastName">Last Name: </label><br>
+                            <input type="text" id="firstName" placeholder="Last Name">    
+                        </div>
+                    </div>
+
+                    <div class="artist__phone info-element">
+                        <label for="phone">Phone Number: </label><br>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+
+                    <div class="artist__address info-element">
+                        <label for="address">Address: </label><br>
+                        <input type="text" id="address" name="address" autocomplete="street-address"><br>
+                        <label for="city">City:</label><br>
+                        <input type="text" id="city" name="city" autocomplete="address-level2"><br>
+                        <label for="state">State:</label><br>
+                        <input type="text" id="state" name="state" autocomplete="address-level1"><br>
+                        <label for="zip">ZIP Code:</label><br>
+                        <input type="text" id="zip" name="zip" autocomplete="postal-code"><br>
+                    </div>
+
+                    <div class="Submit info-element">
+                        <button>Submit</button>
+                    </div>
+
+                    <div></div>
+                </div>
+            </div>
+
             <div id="artist_grid" class="artist_grid"></div>
         </div>
     </div>
@@ -55,72 +95,60 @@
 
 
     function loadGridState() {
-        const savedGrid = localStorage.getItem('artistGrid');
-        if (savedGrid) {
-            const grid = document.getElementById('artist_grid');
-            const cells = JSON.parse(savedGrid);
-            cells.forEach(cellContent => {
-                const cell = document.createElement('div');
-                cell.className = 'grid-cell';
-                cell.innerHTML = cellContent;
-                grid.appendChild(cell);
+        const gridState = JSON.parse(localStorage.getItem('artistGrid') || '[]');
+        gridState.forEach(content => {
+            const cell = document.createElement('div');
+            cell.className = 'grid-cell';
+            cell.innerHTML = content;
+
+            // Add a delete button back
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.style.marginTop = '10px';
+            deleteButton.addEventListener('click', () => {
+                cell.remove(); // Remove the cell from the DOM
+                saveGridState(); // Update localStorage
             });
-        }
+            cell.appendChild(deleteButton);
+
+            document.getElementById('artist_grid').appendChild(cell);
+        });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
         loadGridState();
     });
-
-    // Create image elements
-    /*const img1 = document.createElement('img');
-    img1.src = '/carousel/jason.png';
-    img1.className = 'test';
-    img1.alt = 'Jason';
-
-    const img2 = document.createElement('img');
-    img2.src = '/carousel/nick.png';
-    img2.className = 'test';
-    img2.alt = 'Johnny';
-
-    // Add two images to the same cell
-    addCell(img1, img2);*/
 </script>
 
 <script>
-    function deleteCell(index) {
-        const grid = document.getElementById('artist_grid');
-        const cells = Array.from(grid.children);
-
-        if (index >= 0 && index < cells.length) {
-            grid.removeChild(cells[index]); // Remove the cell from the DOM
-            saveGridState(); // Update localStorage to reflect the new grid
-        } else {
-            console.warn("Invalid index. No cell deleted.");
-        }
-    }
-
-</script>
-
-
-<script>
-    let index = 1;
     const add_artist_button = document.querySelectorAll("[data-artist-button]");
+    const imageUploader = document.getElementById('imageUploader');
+
     add_artist_button.forEach(addButton => {
         addButton.addEventListener("click", () => {
-            const img3 = document.createElement('img');
-            img3.src = '/carousel/martin.png';
-            img3.className = 'test';
-            img3.alt = 'Nick';
+            const files = imageUploader.files;
 
-            const img4 = document.createElement('img');
-            img4.src = '/carousel/scott.png';
-            img4.className = 'test';
-            img4.alt = 'Scott';            
+            if (files.length === 0) {
+                alert("Please select one or more images to upload.");
+                return;
+            }
 
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
 
-            addCell(img3, img4);
-            index++;
+                reader.onload = function(event) {
+                    const img = document.createElement('img');
+                    img.src = event.target.result; // Set the image source to the file's data
+                    img.className = 'test';
+                    img.alt = file.name;
+
+                    addCell(img); // Add the uploaded image to the grid
+                };
+
+                reader.readAsDataURL(file); // Read the file as a data URL
+            });
+
+            imageUploader.value = ""; // Reset the file input after uploading
         });
     });
 </script>

@@ -20,7 +20,7 @@
                         </p><br>
                         
                         <p><strong>Location: </strong><br>
-                            <address> <a href="https://www.google.com/maps/place/1537+Stanley+St,+New+Britain,+CT+06053/@41.6881796,-72.7699479,16z/data=!3m1!4b1!4m6!3m5!1s0x89e7b242d8c30671:0x51c9406af5a555dd!8m2!3d41.6881796!4d-72.7699479!16s%2Fg%2F11cs6l3086?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                            <address class="store__address"> <a href="https://www.google.com/maps/place/1537+Stanley+St,+New+Britain,+CT+06053/@41.6881796,-72.7699479,16z/data=!3m1!4b1!4m6!3m5!1s0x89e7b242d8c30671:0x51c9406af5a555dd!8m2!3d41.6881796!4d-72.7699479!16s%2Fg%2F11cs6l3086?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
                                 1537 Stanley Street <br>
                                 New Britain, CT 06053
                             </a>
